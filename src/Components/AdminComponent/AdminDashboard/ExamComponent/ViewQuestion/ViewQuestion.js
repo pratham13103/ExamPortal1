@@ -34,7 +34,7 @@
 
       useEffect(() => {
           async function getAllQuestions(){
-            let value = await axios.get("http://localhost:3333/Question");
+            let value = await axios.get("http://localhost:3333/questions");
             setQuestions(value.data);
           } 
           getAllQuestions();
@@ -88,7 +88,7 @@
     
 
      async function updateQuestion(){
-          await axios.put(`http://localhost:3333/Question/${qId}` , updatedQ);
+          await axios.put(`http://localhost:3333/questions/${qId}` , updatedQ);
           setCheck(true);
      }
 
@@ -104,7 +104,7 @@
     const [d , setD] = useState();
 
      async function deleteQuestion(id){
-         await axios.delete(`http://localhost:3333/Question/${id}`);
+         await axios.delete(`http://localhost:3333/questions/${id}`);
          setD(true);
      }
   

@@ -13,7 +13,7 @@
 
        useEffect(()=> {
          async function getAllStudent(){
-           let value = await axios.get("http://localhost:3333/user");
+           let value = await axios.get("http://localhost:3333/users");
            setStudents(value.data);
          }
          getAllStudent();

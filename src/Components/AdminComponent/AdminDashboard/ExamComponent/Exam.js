@@ -30,7 +30,7 @@
       useEffect(()=>{
          
          async function getAllExam(){
-             let value = await axios.get("http://localhost:3333/Exam");
+             let value = await axios.get("http://localhost:3333/exams");
              setExams(value.data);
             //  console.log(exams);
          }
@@ -63,7 +63,7 @@
     }
 
     async function handleAddNewExam(){
-        await axios.post("http://localhost:3333/Exam" , exam);
+        await axios.post("http://localhost:3333/exams" , exam);
         setStatus(true);
     }
 
@@ -76,7 +76,7 @@
 
        useEffect(() => {
            async function getAllQuestions(){
-               let value = await axios.get("http://localhost:3333/Question");
+               let value = await axios.get("http://localhost:3333/questions");
                setQuestions(value.data);
             }
             getAllQuestions();
@@ -93,10 +93,10 @@
             {
                 if( parseInt( questions[i].exam_id) === parseInt( id )){
                     // console.log(questions[i].id);
-                    await axios.delete(`http://localhost:3333/Question/${questions[i].id}`);
+                    await axios.delete(`http://localhost:3333/questions/${questions[i].id}`);
                 } 
             }
-            await axios.delete(`http://localhost:3333/Exam/${id}`);
+            await axios.delete(`http://localhost:3333/exams/${id}`);
             setStatusDeleteExam(true);
        }
 

@@ -24,7 +24,7 @@
         useEffect(() => {
           
              async function getExamDetails(){
-                const value = await axios.get(`http://localhost:3333/Exam/${id}`);
+                const value = await axios.get(`http://localhost:3333/exams/${id}`);
                 setExam(value.data);
              }
              getExamDetails();

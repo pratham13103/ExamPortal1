@@ -40,7 +40,7 @@ function StudentSignup() {
 
         if(userData.user_password === password.confirmPassword)
         {
-            await axios.post("http://localhost:3333/user" , userData);
+            await axios.post("http://localhost:3333/users" , userData);
             alert("Your account has created");
             alert("Please Login");
             history.push("/StudentLogin");

@@ -14,7 +14,7 @@
 
           useEffect(() => {
               async function getAllSubject(){
-                  let value = await axios.get("http://localhost:3333/subject");
+                  let value = await axios.get("http://localhost:3333/subjects");
                   setAllSubject(value.data);
               }
               getAllSubject();

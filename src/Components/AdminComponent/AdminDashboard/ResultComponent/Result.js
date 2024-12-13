@@ -15,7 +15,7 @@
         useEffect(()=>{
            
            async function getAllResults(){
-               let value = await axios.get("http://localhost:3333/Result");
+               let value = await axios.get("http://localhost:3333/results");
                setResults(value.data);
            }
                getAllResults();

@@ -34,7 +34,7 @@ import style from "./Subject.module.css";
          useEffect(()=>{
             
             async function getAllSubject(){
-                let value = await axios.get("http://localhost:3333/subject");
+                let value = await axios.get("http://localhost:3333/subjects");
                 setSubjects(value.data);
                 //  console.log(value.data[0].subject_name);
             }
@@ -56,7 +56,7 @@ import style from "./Subject.module.css";
 
 
        async function handleAddNewSubject(){
-            await axios.post("http://localhost:3333/subject" , subject);
+            await axios.post("http://localhost:3333/subjects" , subject);
             setStatus(true);
         }
 
@@ -67,7 +67,7 @@ import style from "./Subject.module.css";
     // ------------------------Deleting Subject and reload component------------------------------
 
        async function deleteSubject(id){
-          await axios.delete(`http://localhost:3333/subject/${id}`);
+          await axios.delete(`http://localhost:3333/subjects/${id}`);
           setStatusDelete(true);
        }
 

@@ -17,7 +17,7 @@
          useEffect(() => {
              async function getStudentEmail(){
                  //user whose result we have to fetch
-                let value = await axios.get(`http://localhost:3333/user/${id}`);
+                let value = await axios.get(`http://localhost:3333/users/${id}`);
                  setEmail(value.data.user_email);
                  
              }
@@ -27,7 +27,7 @@
 
          useEffect(() => {   
              async function getAllResult(){
-                let value = await axios.get("http://localhost:3333/Result");
+                let value = await axios.get("http://localhost:3333/results");
                 setResult(value.data);
              }
              getAllResult();

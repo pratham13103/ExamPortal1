@@ -14,7 +14,7 @@
          useEffect(() => {
 
             async function getAllQuestions(){
-               const value = await axios.get("http://localhost:3333/Question");
+               const value = await axios.get("http://localhost:3333/questions");
                 setQuestions(value.data);
             }
             getAllQuestions();

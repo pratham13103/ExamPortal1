@@ -10,7 +10,7 @@ function Exam() {
 
     useEffect(() => {
         async function getAllExams() {
-            let value = await axios.get("http://localhost:3333/Exam");
+            let value = await axios.get("http://localhost:3333/exams");
             setAllExam(value.data);
         }
         getAllExams();

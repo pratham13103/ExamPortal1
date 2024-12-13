@@ -39,7 +39,7 @@ import axios from "axios";
 
 
             async function addnewQuestion(){
-                await axios.post("http://localhost:3333/Question" , question);
+                await axios.post("http://localhost:3333/questions" , question);
                 history.push(`/AdminDashboard/Exam/ViewQuestion/${id}`);
             }
 
